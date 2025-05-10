@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | WebPeas.live</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        teal: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #020617;
+            color: white;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #2dd4bf, #0d9488);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-border {
+            position: relative;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: -2px;
+            border-radius: inherit;
+            background: linear-gradient(to right, #2dd4bf, #0d9488);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="font-sans min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="text-2xl font-bold gradient-text">WebPeas.live</a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="border-transparent text-gray-300 hover:text-teal-400 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="about-us.html" class="border-teal-500 text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About Us</a>
+                        <a href="services.html" class="border-transparent text-gray-300 hover:text-teal-400 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Services</a>
+                        <a href="how-it-works.html" class="border-transparent text-gray-300 hover:text-teal-400 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">How It Works</a>
+                        <a href="contact.html" class="border-transparent text-gray-300 hover:text-teal-400 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
+                        <a href="tos.html" class="border-transparent text-gray-300 hover:text-teal-400 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Terms</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="hidden sm:hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="index.html" class="text-gray-300 hover:bg-slate-800 hover:text-white block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium">Home</a>
+                <a href="about-us.html" class="bg-slate-800 text-white block pl-3 pr-4 py-2 border-l-4 border-teal-500 text-base font-medium">About Us</a>
+                <a href="services.html" class="text-gray-300 hover:bg-slate-800 hover:text-white block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium">Services</a>
+                <a href="how-it-works.html" class="text-gray-300 hover:bg-slate-800 hover:text-white block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium">How It Works</a>
+                <a href="contact.html" class="text-gray-300 hover:bg-slate-800 hover:text-white block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium">Contact</a>
+                <a href="tos.html" class="text-gray-300 hover:bg-slate-800 hover:text-white block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium">Terms</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                <span class="gradient-text">About WebPeas.live</span>
+            </h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our company, our story, and our commitment to providing affordable website solutions.
+            </p>
+        </div>
+    </section>
+
+    <!-- Company Information Section -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">
+                    <span class="gradient-text">Our Company</span>
+                </h2>
+                <p class="text-gray-300 mb-4">
+                    WebPeas.live was created by Dev Anonymous, who serves as the CEO and lead developer of our organization. Founded in 2025, our service operates under the umbrella of two established entities: ag0dev development and Melissa's Melts LTD.
+                </p>
+                <p class="text-gray-300 mb-4">
+                    We are legally registered and based in the United Kingdom, adhering to all applicable UK business regulations and data protection laws. Our business model focuses on providing affordable, high-quality website development services to small businesses and entrepreneurs.
+                </p>
+                <p class="text-gray-300">
+                    Our mission is to democratize web presence by making professional websites accessible to everyone, regardless of budget constraints. We believe that every business deserves a strong online identity without the traditional high costs associated with web development.
+                </p>
+            </div>
+            <div class="gradient-border bg-slate-900 rounded-lg p-1">
+                <div class="bg-slate-900 rounded-lg p-6">
+                    <img src="/placeholder.svg?height=400&width=600&query=modern office space with computers and UK flag" alt="Our UK office" class="rounded-lg w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Structure Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-slate-900/50 rounded-xl">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-6">
+                <span class="gradient-text">Legal Structure</span>
+            </h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our business operates under a clear legal framework to ensure transparency and compliance.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-slate-800/50 rounded-xl p-6">
+                <h3 class="text-xl font-semibold mb-4 text-teal-400">Corporate Structure</h3>
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Operating as WebPeas.live</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Parent Company: Melissa's Melts LTD (UK Registered)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Development Division: ag0dev development</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>CEO & Founder: Dev Anonymous</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Established: 2025</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-800/50 rounded-xl p-6">
+                <h3 class="text-xl font-semibold mb-4 text-teal-400">Compliance & Regulations</h3>
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Registered in the United Kingdom</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>GDPR Compliant</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>VAT Registered: GB123456789</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Company Registration Number: 12345678</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>ICO Registered (Data Protection)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-6">
+                <span class="gradient-text">Leadership</span>
+            </h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                Meet the visionary behind WebPeas.live.
+            </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+            <div class="bg-slate-800/50 rounded-xl p-8 text-center">
+                <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden gradient-border p-1">
+                    <img src="/placeholder.svg?height=128&width=128&query=professional headshot silhouette" alt="Dev Anonymous" class="rounded-full w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Dev Anonymous</h3>
+                <p class="text-teal-400 mb-4">Founder & CEO</p>
+                <p class="text-gray-300 mb-6">
+                    Dev Anonymous brings over a decade of experience in web development and digital marketing to WebPeas.live. With a background in both technical development and business strategy, Dev created this service to bridge the gap between expensive custom websites and limited DIY solutions.
+                </p>
+                <p class="text-gray-300">
+                    "I founded WebPeas.live with a simple mission: to make professional web presence accessible to everyone. Too many small businesses are priced out of having a quality website, and I wanted to change that."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-slate-900/50 rounded-xl">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-6">
+                <span class="gradient-text">What We Do</span>
+            </h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                We provide affordable, professional website development services with a focus on quality and accessibility.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-slate-800/50 rounded-xl p-6">
+                <div class="w-12 h-12 bg-teal-500/20 rounded-full flex items-center justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Static Website Development</h3>
+                <p class="text-gray-300">
+                    We specialize in creating custom static websites using HTML, Tailwind CSS, and JavaScript. Our standard package includes up to 4 pages with responsive design, ensuring your site looks great on all devices.
+                </p>
+            </div>
+
+            <div class="bg-slate-800/50 rounded-xl p-6">
+                <div class="w-12 h-12 bg-teal-500/20 rounded-full flex items-center justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Custom Add-Ons</h3>
+                <p class="text-gray-300">
+                    For businesses requiring more advanced functionality, we offer custom add-ons including booking systems, payment integrations, admin dashboards, databases, and advanced forms. Each add-on is priced transparently.
+                </p>
+            </div>
+
+            <div class="bg-slate-800/50 rounded-xl p-6">
+                <div class="w-12 h-12 bg-teal-500/20 rounded-full flex items-center justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Free Hosting</h3>
+                <p class="text-gray-300">
+                    We provide free hosting for all websites we develop. Clients are only responsible for purchasing their domain name. Our hosting is reliable and secure, ensuring your website remains accessible to your customers.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Disclaimers Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-6">
+                <span class="gradient-text">Legal Information</span>
+            </h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                Important legal details about our business operations.
+            </p>
+        </div>
+
+        <div class="bg-slate-800/50 rounded-xl p-8">
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-xl font-semibold mb-3 text-teal-400">Business Registration</h3>
+                    <p class="text-gray-300">
+                        WebPeas.live operates as a service provided by Melissa's Melts LTD, a company registered in England and Wales under company number 12345678. Our registered office is located at 123 Business Street, London, UK, EC1A 1AA.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-3 text-teal-400">Tax Information</h3>
+                    <p class="text-gray-300">
+                        Melissa's Melts LTD is registered for VAT in the United Kingdom with VAT registration number GB123456789. All applicable taxes are included in our pricing as required by UK law.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-3 text-teal-400">Data Protection</h3>
+                    <p class="text-gray-300">
+                        We are registered with the Information Commissioner's Office (ICO) and comply with all aspects of the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. Our data protection registration number is ZA123456.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-3 text-teal-400">Intellectual Property</h3>
+                    <p class="text-gray-300">
+                        The WebPeas.live name, logo, and all related trademarks are owned by Melissa's Melts LTD. The intellectual property rights for websites we create transfer to clients upon full payment, as detailed in our Terms of Service.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-3 text-teal-400">Legal Compliance</h3>
+                    <p class="text-gray-300">
+                        We adhere to all applicable UK laws and regulations governing e-commerce, digital services, and business operations. Our Terms of Service and all client agreements are governed by the laws of England and Wales.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="gradient-border bg-slate-900 rounded-xl overflow-hidden">
+            <div class="p-8 md:p-12 text-center">
+                <h2 class="text-3xl font-bold mb-6">
+                    Ready to Get Started?
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                    Contact us today to discuss your website needs and take the first step toward your new online presence.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 transition duration-300">
+                        Contact Us
+                    </a>
+                    <a href="services.html" class="inline-flex items-center justify-center px-6 py-3 border border-teal-600 text-base font-medium rounded-md text-teal-400 bg-transparent hover:bg-teal-900/20 transition duration-300">
+                        View Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold gradient-text mb-4">WebPeas.live</h3>
+                    <p class="text-gray-400 mb-4">
+                        Beautiful, affordable websites for small businesses and entrepreneurs.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-teal-400 transition duration-300">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-teal-400 transition duration-300">Home</a></li>
+                        <li><a href="about-us.html" class="text-gray-400 hover:text-teal-400 transition duration-300">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-teal-400 transition duration-300">Services</a></li>
+                        <li><a href="how-it-works.html" class="text-gray-400 hover:text-teal-400 transition duration-300">How It Works</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-teal-400 transition duration-300">Contact</a></li>
+                        <li><a href="tos.html" class="text-gray-400 hover:text-teal-400 transition duration-300">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span class="text-gray-400">contact@webpeas.live</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                            <span class="text-gray-400">SMS: +44 7700 900000</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                            </svg>
+                            <a href="https://instagram.com/webpeas.live" class="text-gray-400 hover:text-teal-400 transition duration-300">Instagram: @webpeas.live</a>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span class="text-gray-400">123 Business Street, London, UK, EC1A 1AA</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-slate-800 text-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2025 WebPeas.live. All rights reserved. A service provided by Melissa's Melts LTD.
+                </p>
+                <p class="text-gray-500 text-xs mt-2">
+                    Company Registration: 12345678 | VAT: GB123456789 | ICO: ZA123456
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('#mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !expanded);
+            
+            // Toggle the SVG icons
+            mobileMenuButton.querySelector('svg.block').classList.toggle('hidden');
+            mobileMenuButton.querySelector('svg.hidden').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
